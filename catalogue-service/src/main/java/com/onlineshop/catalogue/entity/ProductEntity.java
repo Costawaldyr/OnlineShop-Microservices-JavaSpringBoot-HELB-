@@ -30,7 +30,7 @@ public class ProductEntity {
     @Column(name = "quantity_stock")
     private Integer stock;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
 
