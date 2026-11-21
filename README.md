@@ -23,7 +23,7 @@ Start with the [documentation index](doc/README.md).
 - [Service communication](doc/SERVICE_COMMUNICATION.md): HTTP calls, stock changes and failure handling.
 - [Flow and sequence diagrams](doc/DIAGRAMS.md): architecture, lifecycle and request sequences.
 - [Database guide](doc/DATABASE.md): database setup, tables, relationships and constraints.
-- [PostgreSQL with Docker](doc/DOCKER_POSTGRES.md): start PostgreSQL and initialize application/test databases.
+- [PostgreSQL with Docker](doc/DOCKER_POSTGRES.md): start PostgreSQL and create the databases manually.
 - [Testing guide](doc/TESTING.md): existing tests, commands and remaining work.
 
 ## Requirements
@@ -58,7 +58,7 @@ DB_USERNAME=helb
 DB_PASSWORD=replace_with_your_local_password
 ```
 
-Do not add quotes around values: both services import this file as Java properties through `spring.config.import=optional:file:../.env[.properties]`. Keep the file private; it is ignored by Git. The updated `.env.example` supplies these keys, separate test database names and the optional Docker host port.
+Do not add quotes around values: both services import this file as Java properties through `spring.config.import=optional:file:../.env[.properties]`. Keep the file private; it is ignored by Git. The updated `.env.example` supplies these keys.
 
 Start each application from its own service directory so that `../.env` points to the repository root. Database names are examples and must match databases that actually exist.
 

@@ -154,4 +154,4 @@ Generated identity values can have gaps and do not necessarily restart at 1 afte
 
 ## Docker alternative
 
-Use [DOCKER_POSTGRES.md](DOCKER_POSTGRES.md) to start PostgreSQL 17 in Docker. The standard `docker-compose.yml` mounts `docker/postgres/init/`, and its initialization script creates both application databases and two separate test databases on an empty volume. Hibernate still manages application tables. The guide explains port conflicts, persistent volumes and existing-volume behavior.
+Use [DOCKER_POSTGRES.md](DOCKER_POSTGRES.md) to start PostgreSQL 17 with a simple Compose file. Create the databases manually through psql using the commands above. There is no initialization script or Dockerfile; Hibernate creates/updates application tables when each API starts.

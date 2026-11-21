@@ -72,7 +72,7 @@ No test run was performed for this documentation update. Therefore this report r
 5. `ClientDto` imports validation annotations but does not apply them to its fields. `@Valid` alone does not enforce nonblank name, email or address. Null values can reach service calls such as `trim()`.
 6. No application authentication, authorization or rate limiting is implemented. Stock operations are exposed directly.
 7. Hibernate schema update is used for development; controlled migrations and explicit monetary column precision are not yet supplied.
-8. The environment example and Docker initialization now describe separate application and test databases. Compose parsing and initialization-script syntax were checked; actual container startup remains unverified because Docker daemon access was denied.
+8. The optional Docker setup starts PostgreSQL only. Application and test databases are created manually. Compose configuration parsing was checked; actual container startup remains unverified because Docker daemon access was denied.
 9. Order unit, repository, controller and interservice integration tests remain to be written. Timeout behavior should also be verified because a manually constructed Apache request factory is used.
 
 These items describe the current code; this documentation task does not change the implementation.

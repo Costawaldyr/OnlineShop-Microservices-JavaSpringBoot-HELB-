@@ -10,7 +10,7 @@ This documentation describes the source code in this repository. It distinguishe
 | [Service communication](SERVICE_COMMUNICATION.md) | Explain calls between orders and catalogue |
 | [Diagrams](DIAGRAMS.md) | Read architecture, state, flow, sequence and database diagrams |
 | [Database](DATABASE.md) | Create local databases and understand the persistence model |
-| [PostgreSQL with Docker](DOCKER_POSTGRES.md) | Start the database container and initialize application/test databases |
+| [PostgreSQL with Docker](DOCKER_POSTGRES.md) | Start PostgreSQL and create databases manually |
 | [Testing](TESTING.md) | Run existing tests and plan order-service tests |
 
 ## Suggested reading order
