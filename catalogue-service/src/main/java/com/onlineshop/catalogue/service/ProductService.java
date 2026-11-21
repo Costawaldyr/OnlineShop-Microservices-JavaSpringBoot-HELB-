@@ -1,6 +1,9 @@
 package com.onlineshop.catalogue.service;
 
 import com.onlineshop.catalogue.dto.ProductDto;
+import com.onlineshop.catalogue.exception.InsufficientStockException;
+import com.onlineshop.catalogue.exception.InvalidQuantityException;
+import com.onlineshop.catalogue.exception.ProductNotFoundException;
 import com.onlineshop.catalogue.mapper.CatalogueMapper;
 import com.onlineshop.catalogue.entity.CategoryEntity;
 import com.onlineshop.catalogue.entity.ProductEntity;
@@ -10,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -60,8 +64,9 @@ public class ProductService {
     /**
      *
      */
-    public ProductDto getProductById(Long id) {
-        return catalogueMapper.toProductDto(productRepository.requireById(id));
+    public Optional<ProductDto> getProductById(Long id) {
+        return productRepository.findById(id)
+                .map(catalogueMapper::toProductDto);
     }
 
     /**
@@ -102,20 +107,33 @@ public class ProductService {
     }
 
 
+    @Transactional
+    public void increaseStock(Long productId, int quantity) {
+        if (quantity < MINIMUM_ORDER_QUANTITY) {
+            throw new InvalidQuantityException(quantity);
+        }
+
+        int updatedRows = productRepository.increaseStock(productId, quantity);
+
+        if (updatedRows == 0) {
+            throw new ProductNotFoundException(productId);
+        }
+    }
+
     /**
      *
      */
     @Transactional
     public void decreaseStock(Long productId, int quantity) {
         if (quantity <  MINIMUM_ORDER_QUANTITY) {
-            throw new IllegalArgumentException("Quantity must be at least one");
+            throw new InvalidQuantityException(quantity);
         }
 
         int updatedRows = productRepository.decreaseStock(productId, quantity);
 
         if (updatedRows == 0) {
             productRepository.requireById(productId);
-            throw new IllegalStateException("Insufficient stock");
+            throw new InsufficientStockException(productId);
         }
     }
 }

@@ -3,6 +3,7 @@ package com.onlineshop.catalogue.service;
 
 import com.onlineshop.catalogue.dto.CategoryDto;
 import com.onlineshop.catalogue.exception.CategoryAlreadyExistsException;
+import com.onlineshop.catalogue.exception.CategoryNotEmptyException;
 import com.onlineshop.catalogue.mapper.CatalogueMapper;
 import com.onlineshop.catalogue.entity.CategoryEntity;
 import com.onlineshop.catalogue.repository.CategoryRepository;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CategoryService {
@@ -30,10 +32,7 @@ public class CategoryService {
             throw new CategoryAlreadyExistsException(name);
         }
 
-        CategoryEntity category = new CategoryEntity(
-                categoryDto.name(),
-                categoryDto.description()
-        );
+        CategoryEntity category = new CategoryEntity(name, categoryDto.description());
 
         CategoryEntity savedCategory = repo.save(category);
         return mapper.toCategoryDto(savedCategory);
@@ -46,8 +45,9 @@ public class CategoryService {
                 .toList();
     }
 
-    public CategoryDto getCategoryById(Long id) {
-        return mapper.toCategoryDto(repo.requireById(id));
+    public Optional<CategoryDto> getCategoryById(Long id) {
+        return repo.findById(id)
+                .map(mapper::toCategoryDto);
     }
 
     @Transactional
@@ -66,7 +66,7 @@ public class CategoryService {
         CategoryEntity category = repo.requireById(id);
 
         if (!category.getProductList().isEmpty()) {
-            throw new IllegalStateException("Cannot delete a category with products: " + id );
+            throw new CategoryNotEmptyException(id);
         }
         repo.delete(category);
     }
