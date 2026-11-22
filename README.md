@@ -62,6 +62,20 @@ Do not add quotes around values: both services import this file as Java properti
 
 Start each application from its own service directory so that `../.env` points to the repository root. Database names are examples and must match databases that actually exist.
 
+## Optional: PostgreSQL with Docker
+
+If PostgreSQL is not installed on your machine, use the simple `docker-compose.yml` at the repository root. Docker runs only the database server; both Java APIs continue to run in IntelliJ or separate terminals. No Dockerfile or initialization script is needed.
+
+After configuring `.env`, start PostgreSQL from the repository root:
+
+```bash
+docker compose up -d
+```
+
+Then create the catalogue and order databases manually, as explained in the [Docker guide](doc/DOCKER_POSTGRES.md#create-the-databases-manually). Starting the container alone does not create those two application databases. Create dedicated test databases only when needed for tests.
+
+The server uses port 5432 and keeps data in a named volume. If another PostgreSQL server already uses that port, resolve the conflict before starting the container.
+
 ## Start both APIs
 
 Use two terminal tabs. Start the catalogue first.

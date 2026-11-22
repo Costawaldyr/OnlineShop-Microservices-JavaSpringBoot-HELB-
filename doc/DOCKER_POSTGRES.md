@@ -2,13 +2,33 @@
 
 Docker is an optional way to run PostgreSQL without installing PostgreSQL directly on the host. The two Java APIs still run in IntelliJ or separate terminals.
 
+## Simple Compose configuration
+
+```yaml
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+```
+
+This starts one PostgreSQL server, which can host both application databases. There is no `docker/` directory or automatic database-creation script.
+
 ## Configure and start
 
 Install and start Docker with Docker Compose. From the repository root, create `.env` from `.env.example` if it does not already exist. Otherwise edit the existing file without overwriting your settings. Set DB_USERNAME and DB_PASSWORD, plus the two database names required by the Java applications. Keep values unquoted because Spring also reads the file as properties.
 
 ```bash
 docker compose config --quiet
-docker compose up -d postgres
+docker compose up -d
 docker compose logs postgres
 ```
 
