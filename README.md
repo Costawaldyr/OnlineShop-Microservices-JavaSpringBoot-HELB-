@@ -114,6 +114,8 @@ Use IDs returned by your own requests; do not assume an ID starts at `1`. Reques
 
 ## Project structure
 
+![Online Shop project structure](doc/images/online-shop-project-structure.svg)
+
 | Location | Contents |
 | --- | --- |
 | `catalogue-service/` | Independent Maven project for the catalogue API and its tests |

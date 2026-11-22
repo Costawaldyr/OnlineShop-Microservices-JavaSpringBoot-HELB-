@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1720" viewBox="0 0 1500 1720" role="img" aria-labelledby="title desc">
+<title id="title">Online Shop — Project Structure</title>
+<desc id="desc">Two Spring Boot services, documentation, PostgreSQL Compose and planned order test directories. No order test implementations were added.</desc>
+<rect width="1500" height="1720" fill="#f4f7fb"/>
+<text x="44" y="62" font-family="Arial,Helvetica,sans-serif" font-size="36" font-weight="700" fill="#253750">Online Shop</text>
+<text x="44" y="96" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="400" fill="#52647c">Project structure · Java 21 · Spring Boot · PostgreSQL</text>
+<rect x="44" y="123" width="1412" height="49" rx="12" fill="#152c49" stroke="none"/>
+<text x="65" y="155" font-family="Menlo,Consolas,monospace" font-size="22" font-weight="700" fill="#ffffff">Online Shop/</text>
+<rect x="44" y="194" width="692" height="1065" rx="12" fill="#ffffff" stroke="#d4deea"/>
+<rect x="44" y="194" width="692" height="77" rx="12" fill="#e8eff9" stroke="none"/>
+<text x="64" y="225" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#253750">Catalogue Service</text>
+<text x="64" y="251" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#52647c">Port 8081 · Categories, products and stock</text>
+<path d="M64 290h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="92" y="302" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#253750">catalogue-service/</text>
+<path d="M87 316h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="113" y="330" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">pom.xml</text>
+<path d="M87 344h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="113" y="358" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">mvnw · mvnw.cmd</text>
+<path d="M87 372h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="113" y="386" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">run.sh · test.sh</text>
+<path d="M85 402h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="113" y="414" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">src/main/</text>
+<path d="M106 430h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="134" y="442" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">java/com/onlineshop/catalogue/</text>
+<path d="M129 456h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="155" y="470" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">CatalogueServiceApplication.java</text>
+<path d="M127 486h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="498" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">config/</text>
+<path d="M127 514h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="526" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">controller/</text>
+<path d="M127 542h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="554" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">dto/</text>
+<path d="M127 570h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="582" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">entity/</text>
+<path d="M127 598h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="610" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">exception/</text>
+<path d="M127 626h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="638" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">mapper/</text>
+<path d="M127 654h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="666" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">repository/</text>
+<path d="M127 682h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="694" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">service/</text>
+<path d="M106 710h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="134" y="722" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">resources/</text>
+<path d="M129 736h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="155" y="750" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">application.properties</text>
+<path d="M85 766h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="113" y="778" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">src/test/</text>
+<path d="M106 794h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="134" y="806" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">java/com/onlineshop/catalogue/</text>
+<path d="M129 820h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="155" y="834" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">CatalogueServiceApplicationTests.java</text>
+<path d="M127 850h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="862" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">controllerTest/</text>
+<path d="M127 878h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="890" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">entityTest/</text>
+<path d="M127 906h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="918" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">mapperTest/</text>
+<path d="M127 934h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="946" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">repositoryTest/</text>
+<path d="M127 962h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="155" y="974" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">serviceTest/</text>
+<path d="M106 990h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="134" y="1002" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">resources/</text>
+<path d="M129 1016h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="155" y="1030" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">application.properties</text>
+<rect x="764" y="194" width="692" height="1065" rx="12" fill="#ffffff" stroke="#d4deea"/>
+<rect x="764" y="194" width="692" height="77" rx="12" fill="#e8eff9" stroke="none"/>
+<text x="784" y="225" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700" fill="#253750">Order Service</text>
+<text x="784" y="251" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="400" fill="#52647c">Port 8082 · Clients, orders and order lines</text>
+<path d="M784 290h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="812" y="302" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="700" fill="#253750">order-service/</text>
+<path d="M807 316h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="833" y="330" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">pom.xml</text>
+<path d="M807 344h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="833" y="358" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">mvnw · mvnw.cmd</text>
+<path d="M807 372h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="833" y="386" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">run.sh · test.sh</text>
+<path d="M805 402h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="833" y="414" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">src/main/</text>
+<path d="M826 430h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="854" y="442" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">java/com/onlineshop/order/</text>
+<path d="M849 456h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="875" y="470" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">OrderServiceApplication.java</text>
+<path d="M847 486h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="498" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">client/</text>
+<path d="M847 514h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="526" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">config/</text>
+<path d="M847 542h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="554" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">controller/</text>
+<path d="M847 570h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="582" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">dto/</text>
+<path d="M847 598h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="610" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">entity/</text>
+<path d="M847 626h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="638" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">enums/</text>
+<path d="M847 654h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="666" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">exception/</text>
+<path d="M847 682h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="694" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">mapper/</text>
+<path d="M847 710h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="722" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">repository/</text>
+<path d="M847 738h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="875" y="750" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">service/</text>
+<path d="M826 766h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="854" y="778" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">resources/</text>
+<path d="M849 792h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="875" y="806" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">application.properties</text>
+<path d="M805 822h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="833" y="834" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">src/test/</text>
+<path d="M826 850h7l3 3h9v13h-19z" fill="#b8cee9" stroke="#7088a5"/>
+<text x="854" y="862" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">java/com/onlineshop/order/</text>
+<path d="M849 876h10l5 5v14h-15z" fill="#f4f7fb" stroke="#91a3ba"/>
+<text x="875" y="890" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#253750">OrderServiceApplicationTests.java</text>
+<rect x="842" y="899" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 906h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="918" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">clientTest/</text>
+<rect x="842" y="927" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 934h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="946" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">controllerTest/</text>
+<rect x="842" y="955" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 962h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="974" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">entityTest/</text>
+<rect x="842" y="983" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 990h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="1002" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">mapperTest/</text>
+<rect x="842" y="1011" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 1018h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="1030" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">repositoryTest/</text>
+<rect x="842" y="1039" width="589" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M847 1046h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="875" y="1058" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">serviceTest/</text>
+<rect x="821" y="1067" width="610" height="26" rx="5" fill="#fff8e6" stroke="#debc6c" stroke-dasharray="4 3"/>
+<path d="M826 1074h7l3 3h9v13h-19z" fill="#f2d486" stroke="#7088a5"/>
+<text x="854" y="1086" font-family="Menlo,Consolas,monospace" font-size="15" font-weight="400" fill="#725215">resources/</text>
+<rect x="44" y="1285" width="1412" height="271" rx="12" fill="#ffffff" stroke="#d4deea"/>
+<text x="65" y="1320" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#253750">Shared files and documentation</text>
+<text x="67" y="1356" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">README.md</text>
+<text x="455" y="1356" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">Project overview, setup and documentation links</text>
+<text x="67" y="1388" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">docker-compose.yml</text>
+<text x="455" y="1388" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">Optional PostgreSQL server only</text>
+<text x="67" y="1420" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">.env.example / .env</text>
+<text x="455" y="1420" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">Public template / private local configuration</text>
+<text x="67" y="1452" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">doc/</text>
+<text x="455" y="1452" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">API, dependencies, database, tests, report and diagrams</text>
+<text x="67" y="1484" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">doc/images/</text>
+<text x="455" y="1484" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">Updated project structure illustration</text>
+<text x="67" y="1516" font-family="Menlo,Consolas,monospace" font-size="17" font-weight="400" fill="#253750">0 Docs/</text>
+<text x="455" y="1516" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52647c">Original assignment and design materials</text>
+<rect x="44" y="1580" width="1412" height="92" rx="12" fill="#fff8e6" stroke="#debc6c"/>
+<text x="65" y="1613" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="700" fill="#725215">Amber dashed folders: prepared for future order-service tests.</text>
+<text x="65" y="1644" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#725215">Directories contain .gitkeep only; no test methods or test database configuration were added.</text>
+</svg>

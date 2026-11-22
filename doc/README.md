@@ -13,6 +13,12 @@ This documentation describes the source code in this repository. It distinguishe
 | [PostgreSQL with Docker](DOCKER_POSTGRES.md) | Start PostgreSQL and create databases manually |
 | [Testing](TESTING.md) | Run existing tests and plan order-service tests |
 
+## Project structure
+
+![Current project structure and prepared order test folders](images/online-shop-project-structure.svg)
+
+Amber folders are prepared for future order tests and contain only `.gitkeep` placeholders.
+
 ## Suggested reading order
 
 Read the root [README](../README.md) for setup, then the API guide for a practical scenario. Read the project report and communication guide to understand the design. Use the database and diagram documents when reviewing entity relationships and request flows.

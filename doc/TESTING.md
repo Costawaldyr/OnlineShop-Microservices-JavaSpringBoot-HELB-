@@ -14,6 +14,21 @@
 
 This is an inventory of test sources, not a statement that all tests currently pass. No Maven tests were executed for the documentation update.
 
+## Prepared order test directories
+
+Under `order-service/src/test/java/com/onlineshop/order/`, these directories are ready for the tests to be written:
+
+| Directory | Intended test scope |
+| --- | --- |
+| `serviceTest/` | OrderService, OrderLineService and ClientService business logic |
+| `controllerTest/` | Request mapping, validation and HTTP responses |
+| `repositoryTest/` | PostgreSQL persistence and queries |
+| `entityTest/` | Entity behavior |
+| `mapperTest/` | Entity-to-DTO conversion |
+| `clientTest/` | ProductClient HTTP contract and error handling |
+
+`src/test/resources/` is also prepared. All these new directories contain only `.gitkeep`, allowing Git to track them. No new test methods or test datasource properties have been added. The existing context test remains in the root test package.
+
 ## Run the catalogue tests
 
 Start PostgreSQL and create `online_shop_catalogue_test`. The catalogue's `src/test/resources/application.properties` selects that database. It currently contains local test credentials; these must match the PostgreSQL account on the machine running the tests. Do not copy private credentials into public documentation.
